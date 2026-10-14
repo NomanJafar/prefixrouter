@@ -14,7 +14,7 @@ Reused cache is free speed: up to 80% TTFT cuts on multi-turn workloads.
 
 ## Status
 
-Scaffolded. Concept notes and the first implementation are in progress; results land in `results/` once the GPU runs are done.
+Concept primer written (`CONCEPTS.md`). The proxy is next; results land in `results/` once the 2xT4 run is done.
 
 ## Layout
 
