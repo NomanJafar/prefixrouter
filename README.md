@@ -14,7 +14,7 @@ Reused cache is free speed: up to 80% TTFT cuts on multi-turn workloads.
 
 ## Status
 
-Concept primer written (`CONCEPTS.md`). The proxy is next; results land in `results/` once the 2xT4 run is done.
+Primer, proxy, session load generator and the 2xT4 notebook are done; the GPU run is next.
 
 ## Layout
 
