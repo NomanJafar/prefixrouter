@@ -1,0 +1,2116 @@
+[
+ {
+  "condition": "round_robin",
+  "mode": "round_robin",
+  "threshold": 8,
+  "n_prompts": 4,
+  "sessions_per_prompt": 4,
+  "wall_s": 10.292268753051758,
+  "summary": {
+   "requests": 64,
+   "errors": 0,
+   "ttft": {
+    "n": 64,
+    "mean": 0.60741892678125,
+    "p50": 0.20280931750005493,
+    "p95": 2.198446273449929,
+    "p99": 2.201309727970006,
+    "min": 0.09685123199983536,
+    "max": 2.204255217999844
+   },
+   "itl": {
+    "n": 2984,
+    "mean": 0.041320649300938664,
+    "p50": 0.038719296000067516,
+    "p95": 0.041105050099997695,
+    "p99": 0.07849549121995097,
+    "min": 0.025981766999848332,
+    "max": 0.8200943459999053
+   },
+   "by_turn": {
+    "0": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 1.8766718443749824,
+      "p50": 2.1388374085000805,
+      "p95": 2.200748682250037,
+      "p99": 2.2035539108498825,
+      "min": 0.5895189049999772,
+      "max": 2.204255217999844
+     },
+     "prompt_tokens_mean": 1233.0
+    },
+    "1": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.1839831336249773,
+      "p50": 0.18129871150006238,
+      "p95": 0.22372423549990117,
+      "p99": 0.2279380342998479,
+      "min": 0.09685123199983536,
+      "max": 0.2289914839998346
+     },
+     "prompt_tokens_mean": 1305.0
+    },
+    "2": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.17981773300000725,
+      "p50": 0.175257471000009,
+      "p95": 0.21482197324996832,
+      "p99": 0.2156570754499853,
+      "min": 0.14119564700013143,
+      "max": 0.21586585099998956
+     },
+     "prompt_tokens_mean": 1376.25
+    },
+    "3": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.189202996125033,
+      "p50": 0.18706041600000844,
+      "p95": 0.2525349587500614,
+      "p99": 0.2534618741499116,
+      "min": 0.13504711200016573,
+      "max": 0.2536936029998742
+     },
+     "prompt_tokens_mean": 1447.5
+    }
+   },
+   "by_replica": {
+    "http://127.0.0.1:8001": {
+     "n": 32,
+     "ttft": {
+      "n": 32,
+      "mean": 0.6168836778750091,
+      "p50": 0.20708337249993747,
+      "p95": 2.1990223399499884,
+      "p99": 2.2028058498899235,
+      "min": 0.13504711200016573,
+      "max": 2.204255217999844
+     }
+    },
+    "http://127.0.0.1:8002": {
+     "n": 32,
+     "ttft": {
+      "n": 32,
+      "mean": 0.5979541756874909,
+      "p50": 0.18575356350004313,
+      "p95": 2.1386074877500847,
+      "p99": 2.1416235835000066,
+      "min": 0.09685123199983536,
+      "max": 2.1418423659999917
+     }
+    }
+   },
+   "decisions": {
+    "round_robin": 64
+   }
+  },
+  "cache": {
+   "http://127.0.0.1:8001": {
+    "queries": 42900.0,
+    "hits": 37520.0,
+    "hit_rate": 0.8745920745920746
+   },
+   "http://127.0.0.1:8002": {
+    "queries": 42888.0,
+    "hits": 37456.0,
+    "hit_rate": 0.8733445252751353
+   }
+  },
+  "gateway_metrics": "prefixrouter_decisions_total{reason=\"round_robin\"} 68\nprefixrouter_replica_in_flight{replica=\"http://127.0.0.1:8001\"} 0\nprefixrouter_replica_requests_total{replica=\"http://127.0.0.1:8001\"} 34\nprefixrouter_replica_errors_total{replica=\"http://127.0.0.1:8001\"} 0\nprefixrouter_replica_prefix_cache_hit_rate{replica=\"http://127.0.0.1:8001\"} 0.8719992585040319\nprefixrouter_replica_in_flight{replica=\"http://127.0.0.1:8002\"} 0\nprefixrouter_replica_requests_total{replica=\"http://127.0.0.1:8002\"} 34\nprefixrouter_replica_errors_total{replica=\"http://127.0.0.1:8002\"} 0\nprefixrouter_replica_prefix_cache_hit_rate{replica=\"http://127.0.0.1:8002\"} 0.8707583905062117\n",
+  "per_request": [
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.5895189049999772,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 1.386152839000033,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 2.1338332450000053,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.6085597759999928,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 2.134573772000067,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 2.1365382010001213,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 2.1354332639998574,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 2.14113661600004,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 2.1418423659999917,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 1.4232548649999899,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 2.199579837000101,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 2.198566205999896,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 2.204255217999844,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 2.197085442999878,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 2.1978712000000087,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 2.198547756999915,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.09685123199983536,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.11550653499989494,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.15136619600002632,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.17895008400000734,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.17713208800000757,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.15384304899998824,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.2289914839998346,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.22196848599992336,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.22032321699998647,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.22178607000000738,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.178924613999925,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.1809383050001543,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.18165911799997048,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.21409272699997928,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.21122947400021985,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.21016745899987654,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.15171987200005788,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.14215214799992282,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.1745239090000723,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.15665059799994197,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.2105278950000411,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.18301937299997917,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.2019458320000922,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.17472339400001147,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.17579154800000651,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.2037629100000231,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.21586585099998956,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.21447401399996124,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.1884877540001071,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.14119564700013143,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.17194356899995,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.17029941399982818,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.13983229600012237,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.1620500720000564,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.1553427820001616,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.19221296899991103,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.1695246159999897,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.17971886899999845,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.18190786300010586,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.2017469859999892,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.2039992859999984,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.20367280300001767,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.25214874400012377,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.2536936029998742,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.21942242900013298,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "round_robin",
+    "ttft_s": 0.13504711200016573,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.17572311300000365,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "round_robin",
+    "ttft_s": 0.20120439499987697,
+    "prompt_tokens": 1446,
+    "error": null
+   }
+  ]
+ },
+ {
+  "condition": "affinity",
+  "mode": "affinity",
+  "threshold": 8,
+  "n_prompts": 4,
+  "sessions_per_prompt": 4,
+  "wall_s": 9.264554977416992,
+  "summary": {
+   "requests": 64,
+   "errors": 0,
+   "ttft": {
+    "n": 64,
+    "mean": 0.42523687387501496,
+    "p50": 0.18895042750000357,
+    "p95": 1.3183847957500574,
+    "p99": 1.3194250566899677,
+    "min": 0.09975886800020817,
+    "max": 1.3196904989999894
+   },
+   "itl": {
+    "n": 2984,
+    "mean": 0.03972235302647412,
+    "p50": 0.03894585199998346,
+    "p95": 0.0408207922498832,
+    "p99": 0.07515727619999325,
+    "min": 0.02294398800017916,
+    "max": 0.5650179889998981
+   },
+   "by_turn": {
+    "0": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 1.1715633269375303,
+      "p50": 1.1681059874999846,
+      "p95": 1.3193744962499636,
+      "p99": 1.3196272984499842,
+      "min": 0.5908939630000987,
+      "max": 1.3196904989999894
+     },
+     "prompt_tokens_mean": 1233.0
+    },
+    "1": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.17192402750005442,
+      "p50": 0.18228038400002333,
+      "p95": 0.19966903475005893,
+      "p99": 0.21664802375007639,
+      "min": 0.09975886800020817,
+      "max": 0.22089277100008076
+     },
+     "prompt_tokens_mean": 1305.0
+    },
+    "2": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.1746253246874545,
+      "p50": 0.16429176699989512,
+      "p95": 0.21119498249993285,
+      "p99": 0.21256279649981025,
+      "min": 0.12865026899999066,
+      "max": 0.2129047499997796
+     },
+     "prompt_tokens_mean": 1376.25
+    },
+    "3": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.18283481637502064,
+      "p50": 0.18662535800012847,
+      "p95": 0.20854851600012125,
+      "p99": 0.2355860591999885,
+      "min": 0.12979371200003698,
+      "max": 0.24234544499995536
+     },
+     "prompt_tokens_mean": 1447.5
+    }
+   },
+   "by_replica": {
+    "http://127.0.0.1:8001": {
+     "n": 32,
+     "ttft": {
+      "n": 32,
+      "mean": 0.40165862359377513,
+      "p50": 0.18339320399991266,
+      "p95": 1.1678888613999903,
+      "p99": 1.168184425770014,
+      "min": 0.09975886800020817,
+      "max": 1.168312404000062
+     }
+    },
+    "http://127.0.0.1:8002": {
+     "n": 32,
+     "ttft": {
+      "n": 32,
+      "mean": 0.4488151241562548,
+      "p50": 0.19516265000004296,
+      "p95": 1.3188716484000793,
+      "p99": 1.3195598845299787,
+      "min": 0.1015185180001481,
+      "max": 1.3196904989999894
+     }
+    }
+   },
+   "decisions": {
+    "affinity": 48,
+    "fallback": 16
+   }
+  },
+  "cache": {
+   "http://127.0.0.1:8001": {
+    "queries": 42900.0,
+    "hits": 40112.0,
+    "hit_rate": 0.9350116550116551
+   },
+   "http://127.0.0.1:8002": {
+    "queries": 42888.0,
+    "hits": 40048.0,
+    "hit_rate": 0.9337810110054094
+   }
+  },
+  "gateway_metrics": "prefixrouter_decisions_total{reason=\"affinity\"} 52\nprefixrouter_decisions_total{reason=\"fallback\"} 16\nprefixrouter_replica_in_flight{replica=\"http://127.0.0.1:8001\"} 0\nprefixrouter_replica_requests_total{replica=\"http://127.0.0.1:8001\"} 36\nprefixrouter_replica_errors_total{replica=\"http://127.0.0.1:8001\"} 0\nprefixrouter_replica_prefix_cache_hit_rate{replica=\"http://127.0.0.1:8001\"} 0.9317239472956786\nprefixrouter_replica_in_flight{replica=\"http://127.0.0.1:8002\"} 0\nprefixrouter_replica_requests_total{replica=\"http://127.0.0.1:8002\"} 32\nprefixrouter_replica_errors_total{replica=\"http://127.0.0.1:8002\"} 0\nprefixrouter_replica_prefix_cache_hit_rate{replica=\"http://127.0.0.1:8002\"} 0.9337810110054094\n",
+  "per_request": [
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.5908939630000987,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.168312404000062,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1678800990000582,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1677826270001788,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 1.1552294759999313,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 1.167005010000139,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 1.1674068400000124,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1678995709999072,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.7634001469998566,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.319269161999955,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.318546410000181,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3181012400000327,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3175012100000458,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3196904989999894,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3184348350000619,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3176597379999748,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.09975886800020817,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18096635100005187,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.18056943399983538,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18060488500009342,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.17862203300001056,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.17962911900008294,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1835944169999948,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.1015185180001481,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.22089277100008076,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.11102560299991637,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18696484500014776,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18926412399991932,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18863673100008782,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18942278000008628,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18671950500015555,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19259445600005165,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.13590452199991887,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.1649506809999366,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.16773426300005667,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1634342709999146,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.16157346699992559,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.16261050299999624,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.16363285299985364,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.13988816899995982,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.12865026899999066,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.14806724800018856,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.208226631999878,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.21062505999998393,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.2129047499997796,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.21019836799996483,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.20738088600000992,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.20822325299991462,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.1398029410001982,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18319199099983052,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18559919800009084,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.18379434999997102,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.1876515180001661,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1848117080000975,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18364954500020758,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "affinity",
+    "ttft_s": 0.18779810699993504,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.12979371200003698,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.15151862599986998,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19304242699990937,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19078610399992613,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19160964200000308,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19267887499995595,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19728287300017655,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.24234544499995536,
+    "prompt_tokens": 1446,
+    "error": null
+   }
+  ]
+ },
+ {
+  "condition": "affinity, skewed (one prompt x3)",
+  "mode": "affinity",
+  "threshold": 6,
+  "n_prompts": 4,
+  "sessions_per_prompt": 4,
+  "wall_s": 10.013865232467651,
+  "summary": {
+   "requests": 64,
+   "errors": 0,
+   "ttft": {
+    "n": 64,
+    "mean": 0.4329093918437543,
+    "p50": 0.1990428235001218,
+    "p95": 1.3171743894000543,
+    "p99": 1.3198672942199574,
+    "min": 0.09465598500014494,
+    "max": 1.3199233679999907
+   },
+   "itl": {
+    "n": 3000,
+    "mean": 0.041011572421333006,
+    "p50": 0.04117104950000794,
+    "p95": 0.04436111870001014,
+    "p99": 0.07032933065994683,
+    "min": 0.025518937000015285,
+    "max": 0.5669394429999102
+   },
+   "by_turn": {
+    "0": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 1.1909409635625252,
+      "p50": 1.310420119499895,
+      "p95": 1.319856613499951,
+      "p99": 1.3199100170999827,
+      "min": 0.6066890010001771,
+      "max": 1.3199233679999907
+     },
+     "prompt_tokens_mean": 1233.0
+    },
+    "1": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.17519089506247099,
+      "p50": 0.1720921894999492,
+      "p95": 0.2463048309999749,
+      "p99": 0.2467656501999727,
+      "min": 0.09465598500014494,
+      "max": 0.24688085499997214
+     },
+     "prompt_tokens_mean": 1305.0
+    },
+    "2": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.17323033043750513,
+      "p50": 0.17409014450015547,
+      "p95": 0.22625316374990234,
+      "p99": 0.22627436235000004,
+      "min": 0.1222442560001582,
+      "max": 0.22627966200002447
+     },
+     "prompt_tokens_mean": 1376.25
+    },
+    "3": {
+     "n": 16,
+     "ttft": {
+      "n": 16,
+      "mean": 0.19227537831251595,
+      "p50": 0.20200168900009885,
+      "p95": 0.23220858124989263,
+      "p99": 0.23313166264990742,
+      "min": 0.12607291099993745,
+      "max": 0.2333624329999111
+     },
+     "prompt_tokens_mean": 1448.25
+    }
+   },
+   "by_replica": {
+    "http://127.0.0.1:8001": {
+     "n": 24,
+     "ttft": {
+      "n": 24,
+      "mean": 0.3834766872083719,
+      "p50": 0.17287742499991055,
+      "p95": 1.1725465288998749,
+      "p99": 1.1727997003899737,
+      "min": 0.09465598500014494,
+      "max": 1.1728399290000198
+     }
+    },
+    "http://127.0.0.1:8002": {
+     "n": 40,
+     "ttft": {
+      "n": 40,
+      "mean": 0.4625690146249838,
+      "p50": 0.21660482900006173,
+      "p95": 1.3178624726501198,
+      "p99": 1.31988865565997,
+      "min": 0.10617498400006298,
+      "max": 1.3199233679999907
+     }
+    }
+   },
+   "decisions": {
+    "fallback": 24,
+    "affinity": 40
+   }
+  },
+  "cache": {
+   "http://127.0.0.1:8001": {
+    "queries": 32178.0,
+    "hits": 29456.0,
+    "hit_rate": 0.9154080427621356
+   },
+   "http://127.0.0.1:8002": {
+    "queries": 53622.0,
+    "hits": 50752.0,
+    "hit_rate": 0.9464771921972325
+   }
+  },
+  "gateway_metrics": "prefixrouter_decisions_total{reason=\"affinity\"} 44\nprefixrouter_decisions_total{reason=\"fallback\"} 24\nprefixrouter_replica_in_flight{replica=\"http://127.0.0.1:8001\"} 0\nprefixrouter_replica_requests_total{replica=\"http://127.0.0.1:8001\"} 28\nprefixrouter_replica_errors_total{replica=\"http://127.0.0.1:8001\"} 0\nprefixrouter_replica_prefix_cache_hit_rate{replica=\"http://127.0.0.1:8001\"} 0.9113490364025696\nprefixrouter_replica_in_flight{replica=\"http://127.0.0.1:8002\"} 0\nprefixrouter_replica_requests_total{replica=\"http://127.0.0.1:8002\"} 40\nprefixrouter_replica_errors_total{replica=\"http://127.0.0.1:8002\"} 0\nprefixrouter_replica_prefix_cache_hit_rate{replica=\"http://127.0.0.1:8002\"} 0.9464771921972325\n",
+  "per_request": [
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.6066890010001771,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1728399290000198,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1718750680001904,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1726650219998191,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1580551080000987,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 1.1710278320001635,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.7562046709999777,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3163234850001118,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3171322769999279,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3167045449999932,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3198343619999378,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3177586890001294,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3171818210000765,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3046067149998635,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3199233679999907,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 0,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 1.3162335239999265,
+    "prompt_tokens": 1233,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.09465598500014494,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1158831159998499,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.11525098100014475,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1833630720000201,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18149673599987182,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.18430391000015334,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.10617498400006298,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.16924859599998854,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.17493578299990986,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.167220819999784,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.16704436499981057,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.16898481099997298,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.24028410100004294,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.24121338299983108,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.24611282299997583,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 1,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.24688085499997214,
+    "prompt_tokens": 1305,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.12535985299996355,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.12271410400012428,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1222442560001582,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.16425811399994927,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.16085444800000914,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.16246793999994225,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.1547824199999468,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.1824338760000046,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18540350499984015,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18273794199990334,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18230460700010553,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.18188366700019287,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.16629662200011808,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.22541993999993792,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.22627966200002447,
+    "prompt_tokens": 1374,
+    "error": null
+   },
+   {
+    "turn": 2,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.22624433099986163,
+    "prompt_tokens": 1377,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.12607291099993745,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.14811895100001493,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.14877769899999294,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1994981060001919,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.1963808099999369,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8001",
+    "reason": "fallback",
+    "ttft_s": 0.19858754100005171,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.14254441700018106,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.2045052720000058,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.20519092500012448,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.20597849599994333,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.20778971800018553,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 1,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.2049496959998578,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.19241004200011957,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 3,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.23182396399988647,
+    "prompt_tokens": 1446,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 2,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.2333624329999111,
+    "prompt_tokens": 1449,
+    "error": null
+   },
+   {
+    "turn": 3,
+    "system_idx": 0,
+    "replica": "http://127.0.0.1:8002",
+    "reason": "affinity",
+    "ttft_s": 0.2304150719999143,
+    "prompt_tokens": 1449,
+    "error": null
+   }
+  ]
+ }
+]
