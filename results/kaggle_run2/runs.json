@@ -1,0 +1,26 @@
+[
+ {
+  "condition": "round_robin",
+  "mode": "round_robin",
+  "threshold": 8,
+  "n_prompts": 4,
+  "sessions_per_prompt": 4,
+  "error": "RuntimeError: asyncio.run() cannot be called from a running event loop"
+ },
+ {
+  "condition": "affinity",
+  "mode": "affinity",
+  "threshold": 8,
+  "n_prompts": 4,
+  "sessions_per_prompt": 4,
+  "error": "RuntimeError: asyncio.run() cannot be called from a running event loop"
+ },
+ {
+  "condition": "affinity, skewed (one prompt x3)",
+  "mode": "affinity",
+  "threshold": 6,
+  "n_prompts": 4,
+  "sessions_per_prompt": 4,
+  "error": "RuntimeError: asyncio.run() cannot be called from a running event loop"
+ }
+]
